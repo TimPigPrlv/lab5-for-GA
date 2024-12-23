@@ -1,0 +1,38 @@
+/Users/artemprivalov/dev/tmp/labs/tetris/obj/Debug/net9.0/tetris.GeneratedMSBuildEditorConfig.editorconfig
+/Users/artemprivalov/dev/tmp/labs/tetris/obj/Debug/net9.0/tetris.AssemblyInfoInputs.cache
+/Users/artemprivalov/dev/tmp/labs/tetris/obj/Debug/net9.0/tetris.AssemblyInfo.cs
+/Users/artemprivalov/dev/tmp/labs/tetris/obj/Debug/net9.0/tetris.csproj.CoreCompileInputs.cache
+/Users/artemprivalov/dev/tmp/labs/tetris/bin/Debug/net9.0/tetris
+/Users/artemprivalov/dev/tmp/labs/tetris/bin/Debug/net9.0/tetris.deps.json
+/Users/artemprivalov/dev/tmp/labs/tetris/bin/Debug/net9.0/tetris.runtimeconfig.json
+/Users/artemprivalov/dev/tmp/labs/tetris/bin/Debug/net9.0/tetris.dll
+/Users/artemprivalov/dev/tmp/labs/tetris/bin/Debug/net9.0/tetris.pdb
+/Users/artemprivalov/dev/tmp/labs/tetris/obj/Debug/net9.0/tetris.dll
+/Users/artemprivalov/dev/tmp/labs/tetris/obj/Debug/net9.0/refint/tetris.dll
+/Users/artemprivalov/dev/tmp/labs/tetris/obj/Debug/net9.0/tetris.pdb
+/Users/artemprivalov/dev/tmp/labs/tetris/obj/Debug/net9.0/tetris.genruntimeconfig.cache
+/Users/artemprivalov/dev/tmp/labs/tetris/obj/Debug/net9.0/ref/tetris.dll
+/Users/artemprivalov/dev/tmp/labs/tetris/bin/Debug/net9.0/tetris.xml
+/Users/artemprivalov/dev/tmp/labs/tetris/obj/Debug/net9.0/tetris.xml
+/Users/test/Desktop/tetris 2/bin/Debug/net9.0/tetris
+/Users/test/Desktop/tetris 2/bin/Debug/net9.0/tetris.deps.json
+/Users/test/Desktop/tetris 2/bin/Debug/net9.0/tetris.runtimeconfig.json
+/Users/test/Desktop/tetris 2/bin/Debug/net9.0/tetris.dll
+/Users/test/Desktop/tetris 2/bin/Debug/net9.0/tetris.pdb
+/Users/test/Desktop/tetris 2/bin/Debug/net9.0/tetris.xml
+/Users/test/Desktop/tetris 2/obj/Debug/net9.0/tetris.GeneratedMSBuildEditorConfig.editorconfig
+/Users/test/Desktop/tetris 2/obj/Debug/net9.0/tetris.AssemblyInfoInputs.cache
+/Users/test/Desktop/tetris 2/obj/Debug/net9.0/tetris.AssemblyInfo.cs
+/Users/test/Desktop/tetris 2/obj/Debug/net9.0/tetris.csproj.CoreCompileInputs.cache
+/Users/test/Desktop/tetris 2/obj/Debug/net9.0/tetris.sourcelink.json
+/Users/test/Desktop/tetris 2/obj/Debug/net9.0/tetris.dll
+/Users/test/Desktop/tetris 2/obj/Debug/net9.0/refint/tetris.dll
+/Users/test/Desktop/tetris 2/obj/Debug/net9.0/tetris.xml
+/Users/test/Desktop/tetris 2/obj/Debug/net9.0/tetris.pdb
+/Users/test/Desktop/tetris 2/obj/Debug/net9.0/tetris.genruntimeconfig.cache
+/Users/test/Desktop/tetris 2/obj/Debug/net9.0/ref/tetris.dll
+/Users/test/Desktop/tetris_2/obj/Debug/net9.0/tetris.GeneratedMSBuildEditorConfig.editorconfig
+/Users/test/Desktop/tetris_2/obj/Debug/net9.0/tetris.AssemblyInfoInputs.cache
+/Users/test/Desktop/tetris_2/obj/Debug/net9.0/tetris.AssemblyInfo.cs
+/Users/test/Desktop/tetris_2/obj/Debug/net9.0/tetris.csproj.CoreCompileInputs.cache
+/Users/test/Desktop/tetris_2/obj/Debug/net9.0/tetris.sourcelink.json
