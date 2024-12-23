@@ -32,7 +32,8 @@ namespace TetrisGame
                     Author.ShowAuthorInfo();
                     break;
                 case "3":
-                    ArraySort.PerformArraySorting();
+                    var arraySorting = new ArraySorting();
+                    ArraySorting.PerformArraySorting(); 
                     break;
                     case "4":
                     CorrectnessOfValue.ConfirmExit();
@@ -47,6 +48,18 @@ namespace TetrisGame
                     break;
             }
         }
+        // Основной класс программы
+    
+        // Создаем экземпляр класса с параметрами
+        Console.Write("Введите количество элементов массива: ");
+        int userInputLength = Convert.ToInt32(Console.ReadLine());
+        ArraySorting customArraySort = new ArraySorting(userInputLength);
+        customArraySorting.PerformArraySorting();
+
+        // Создаем экземпляр класса без параметров
+        ArraySorting defaultArraySort = new ArraySorting();
+        defaultArraySorting.PerformArraySorting();
+
     }
     }
 }

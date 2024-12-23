@@ -33,7 +33,7 @@ namespace TetrisGame
         /// <summary>
         /// Выполняет сортировку массива и сравнивает алгоритмы сортировки.
         /// </summary>
-        public void PerformArraySorting()
+        public static void PerformArraySorting()
         {
             Console.WriteLine("--- Сортировка массива ---");
             Console.WriteLine("Исходный массив:");
