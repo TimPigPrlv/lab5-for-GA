@@ -1,42 +1,42 @@
 namespace TetrisGame
 {
     /// <summary>
-    /// Represents the various shapes of Tetris figures.
+    /// Представляет различные формы фигур Тетриса.
     /// </summary>
     public enum ShapeType
     {
         /// <summary>
-        /// A square-shaped figure.
+        /// Фигура в форме квадрата.
         /// </summary>
         Square,
 
         /// <summary>
-        /// A straight line-shaped figure.
+        /// Фигура в форме прямой линии.
         /// </summary>
         Line,
 
         /// <summary>
-        /// An L-shaped figure.
+        /// Фигура в форме L.
         /// </summary>
         L,
 
         /// <summary>
-        /// A reverse L-shaped figure.
+        /// Фигура в форме обратной L.
         /// </summary>
         J,
 
         /// <summary>
-        /// A Z-shaped figure.
+        /// Фигура в форме Z.
         /// </summary>
         Z,
 
         /// <summary>
-        /// A reverse Z-shaped figure.
+        /// Фигура в форме обратной Z.
         /// </summary>
         S,
 
         /// <summary>
-        /// A T-shaped figure.
+        /// Фигура в форме T.
         /// </summary>
         T
     }

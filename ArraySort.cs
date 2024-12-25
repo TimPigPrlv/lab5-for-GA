@@ -1,6 +1,8 @@
 using System.Diagnostics.Contracts;
 using System.Diagnostics;
 
+
+
 namespace TetrisGame 
 {
     /// <summary>
@@ -33,22 +35,21 @@ namespace TetrisGame
         /// <summary>
         /// Выполняет сортировку массива и сравнивает алгоритмы сортировки.
         /// </summary>
-        public static void PerformArraySorting()
+        public void PerformArraySorting()
         {
             Console.WriteLine("--- Сортировка массива ---");
             Console.WriteLine("Исходный массив:");
             CorrectnessOfValue.PrintArray(randomArray);
 
             Console.WriteLine("Сравниваем пузырьковую сортировку и сортировку вставками...");
-            CompareSortingAlgorithms(randomArray);
+            CompareSortingAlgorithms();
         }
 
         /// <summary>
         /// Генерирует массив случайных целых чисел заданной длины.
         /// </summary>
         /// <param name="length">Длина массива.</param>
-        /// <returns>Сгенерированный массив целых чисел.</returns>
-        static int[] GenerateRandomArray(int length)
+        private static int[] GenerateRandomArray(int length)
         {
             int[] array = new int[length];
             Random random = new();
@@ -66,7 +67,7 @@ namespace TetrisGame
         /// </summary>
         /// <param name="a">Массив, который нужно скопировать.</param>
         /// <returns>Копия массива целых чисел.</returns>
-        static int[] CopyArray(int[] a)
+        private static int[] CopyArray(int[] a)
         {
             int[] b = new int[a.Length];
             for (int i = 0; i < a.Length; i++)
@@ -79,11 +80,10 @@ namespace TetrisGame
         /// <summary>
         /// Сравнивает время выполнения алгоритмов сортировки.
         /// </summary>
-        /// <param name="array">Массив целых чисел для сортировки.</param>
-        static void CompareSortingAlgorithms(int[] array)
+        private void CompareSortingAlgorithms()
         {
-            int[] bubbleSortArray = CopyArray(array);
-            int[] insertionSortArray = CopyArray(array);
+            int[] bubbleSortArray = CopyArray(randomArray);
+            int[] insertionSortArray = CopyArray(randomArray);
 
             Console.WriteLine("Пузырьковая сортировка:");
             double bubbleSortTime = MeasureExecutionTime(() => BubbleSort(bubbleSortArray));
@@ -111,7 +111,7 @@ namespace TetrisGame
         /// </summary>
         /// <param name="sortingFunction">Функция сортировки, время выполнения которой нужно измерить.</param>
         /// <returns>Время выполнения в миллисекундах.</returns>
-        static double MeasureExecutionTime(Action sortingFunction)
+        private static double MeasureExecutionTime(Action sortingFunction)
         {
             Stopwatch stopwatch = Stopwatch.StartNew();
             sortingFunction();
@@ -122,8 +122,7 @@ namespace TetrisGame
         /// <summary>
         /// Выполняет пузырьковую сортировку массива.
         /// </summary>
-        /// <param name="array">Массив целых чисел для сортировки.</param>
-        static void BubbleSort(int[] array)
+        private void BubbleSort(int[] array)
         {
             for (int i = 0; i < array.Length - 1; i++)
             {
@@ -142,8 +141,7 @@ namespace TetrisGame
         /// <summary>
         /// Выполняет сортировку вставками массива.
         /// </summary>
-        /// <param name="array">Массив целых чисел для сортировки.</param>
-        static void InsertionSort(int[] array)
+        private void InsertionSort(int[] array)
         {
             for (int i = 1; i < array.Length; i++)
             {

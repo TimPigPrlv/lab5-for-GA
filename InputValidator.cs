@@ -2,46 +2,46 @@ namespace TetrisGame
 
 {
     /// <summary>
-    /// Provides methods to validate and process user input for Tetris game controls.
+/// Предоставляет методы для валидации и обработки ввода пользователя для управления игрой Тетрис.
+/// </summary>
+public static class InputValidator
+{
+    /// <summary>
+    /// Проверяет, соответствует ли ввод допустимым управляющим командам игры Тетрис.
+    /// Допустимые команды: A (Движение влево), D (Движение вправо), S (Движение вниз), W (Поворот) и Space (Быстрое падение).
     /// </summary>
-    public static class InputValidator
+    /// <param name="input">Строка ввода пользователя для проверки.</param>
+    /// <returns><see langword="true"/> если ввод является допустимой командой; в противном случае <see langword="false"/>.</returns>
+    public static bool ValidateControlInput(string input)
     {
-        /// <summary>
-        /// Validates if the input corresponds to valid Tetris game controls.
-        /// Valid controls are: A (Move Left), D (Move Right), S (Move Down), W (Rotate), and Space (Fast Drop).
-        /// </summary>
-        /// <param name="input">The user input string to validate.</param>
-        /// <returns><see langword="true"/> if the input is a valid control; otherwise, <see langword="false"/>.</returns>
-        public static bool ValidateControlInput(string input)
-        {
-            return input is "A" or "S" or "D" or "W" or " ";
-        }
+        return input is "A" or "S" or "D" or "W" or " ";
+    }
 
-        /// <summary>
-        /// Prompts the user until valid Tetris game control input is provided.
-        /// </summary>
-        /// <returns>A validated string representing a valid control.</returns>
-        public static string GetValidatedControlInput()
+    /// <summary>
+    /// Запрашивает пользователя до тех пор, пока не будет предоставлен допустимый ввод управления игрой Тетрис.
+    /// </summary>
+    /// <returns>Проверенная строка, представляющая допустимую команду.</returns>
+    public static string GetValidatedControlInput()
+    {
+        while (true)
         {
-            while (true)
+            Console.Write("Введите ваш ход (A/D/S/W/Space): ");
+            var key = Console.ReadKey(intercept: true);
+            Console.WriteLine();
+            
+            string input = key.KeyChar.ToString().ToUpper();
+            if (key.Key == ConsoleKey.Spacebar)
             {
-                Console.Write("Enter your move (A/D/S/W/Space): ");
-                var key = Console.ReadKey(intercept: true);
-                Console.WriteLine();
-                
-                string input = key.KeyChar.ToString().ToUpper();
-                if (key.Key == ConsoleKey.Spacebar)
-                {
-                    input = " ";
-                }
-
-                if (ValidateControlInput(input))
-                {
-                    return input;
-                }
-
-                Console.WriteLine("Invalid input. Valid inputs are A, D, S, W, or Space.");
+                input = " ";
             }
+
+            if (ValidateControlInput(input))
+            {
+                return input;
+            }
+
+            Console.WriteLine("Недопустимый ввод. Допустимые вводы: A, D, S, W или Space.");
         }
     }
+}
 }

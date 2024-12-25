@@ -1,0 +1,366 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>tetris</name>
+    </assembly>
+    <members>
+        <member name="T:TetrisGame.ArraySorting">
+            <summary>
+            Класс для сортировки массивов с использованием различных алгоритмов сортировки.
+            </summary>
+        </member>
+        <member name="M:TetrisGame.ArraySorting.#ctor">
+            <summary>
+            Конструктор без параметров (по умолчанию создает массив из 10 элементов).
+            </summary>
+        </member>
+        <member name="M:TetrisGame.ArraySorting.#ctor(System.Int32)">
+            <summary>
+            Конструктор с параметром для задания длины массива.
+            </summary>
+            <param name="length">Количество элементов в массиве.</param>
+        </member>
+        <member name="M:TetrisGame.ArraySorting.PerformArraySorting">
+            <summary>
+            Выполняет сортировку массива и сравнивает алгоритмы сортировки.
+            </summary>
+        </member>
+        <member name="M:TetrisGame.ArraySorting.GenerateRandomArray(System.Int32)">
+            <summary>
+            Генерирует массив случайных целых чисел заданной длины.
+            </summary>
+            <param name="length">Длина массива.</param>
+        </member>
+        <member name="M:TetrisGame.ArraySorting.CopyArray(System.Int32[])">
+            <summary>
+            Копирует массив целых чисел.
+            </summary>
+            <param name="a">Массив, который нужно скопировать.</param>
+            <returns>Копия массива целых чисел.</returns>
+        </member>
+        <member name="M:TetrisGame.ArraySorting.CompareSortingAlgorithms">
+            <summary>
+            Сравнивает время выполнения алгоритмов сортировки.
+            </summary>
+        </member>
+        <member name="M:TetrisGame.ArraySorting.MeasureExecutionTime(System.Action)">
+            <summary>
+            Измеряет время выполнения функции сортировки.
+            </summary>
+            <param name="sortingFunction">Функция сортировки, время выполнения которой нужно измерить.</param>
+            <returns>Время выполнения в миллисекундах.</returns>
+        </member>
+        <member name="M:TetrisGame.ArraySorting.BubbleSort(System.Int32[])">
+            <summary>
+            Выполняет пузырьковую сортировку массива.
+            </summary>
+        </member>
+        <member name="M:TetrisGame.ArraySorting.InsertionSort(System.Int32[])">
+            <summary>
+            Выполняет сортировку вставками массива.
+            </summary>
+        </member>
+        <member name="T:TetrisGame.Author">
+            <summary>
+            Представляет информацию об авторе 
+            </summary>
+        </member>
+        <member name="M:TetrisGame.Author.ShowAuthorInfo">
+            <summary>
+            Ввыводит информацию об авторе в консоль 
+            </summary>
+        </member>
+        <member name="T:TetrisGame.CorrectnessOfValue">
+            <summary>
+            Предоставляет методы для проверки корректности ввода значений и работы с массивами.
+            </summary>
+        </member>
+        <member name="M:TetrisGame.CorrectnessOfValue.ReadInt">
+            <summary>
+            Считывает целое положительное число от пользователя.
+            </summary>
+            <returns>Положительное целое число, введенное пользователем.</returns>
+        </member>
+        <member name="M:TetrisGame.CorrectnessOfValue.PrintArray(System.Int32[])">
+            <summary>
+            Выводит содержимое массива целых чисел в консоль.
+            </summary>
+            <param name="array">Массив целых чисел для отображения.</param>
+        </member>
+        <member name="M:TetrisGame.CorrectnessOfValue.ConfirmExit">
+            <summary>
+            Подтверждает, хочет ли пользователь выйти из программы.
+            </summary>
+            <returns>Возвращает <c>true</c>, если пользователь решает остаться в программе; <c>false</c>, если хочет выйти.</returns>
+        </member>
+        <member name="T:TetrisGame.Game">
+            <summary>
+            Представляет контроллер игры Тетрис.
+            Управляет игровым процессом, включая создание фигур, отображение поля и обработку пользовательского ввода.
+            </summary>
+        </member>
+        <member name="M:TetrisGame.Game.#ctor">
+            <summary>
+            Инициализирует новый экземпляр класса <see cref="T:TetrisGame.Game"/>.
+            </summary>
+        </member>
+        <member name="M:TetrisGame.Game.Start">
+            <summary>
+            Запускает игру Тетрис.
+            Отображает инструкции по игре, обрабатывает создание фигур, ввод от пользователя и завершение игры.
+            </summary>
+        </member>
+        <member name="T:TetrisGame.TetrisFigureFactory">
+            <summary>
+            Фабрика для создания фигур Тетриса.
+            Предоставляет методы для создания предопределенных или случайных фигур.
+            </summary>
+        </member>
+        <member name="M:TetrisGame.TetrisFigureFactory.CreateFigure(TetrisGame.ShapeType)">
+            <summary>
+            Создает фигуру Тетриса указанного типа.
+            </summary>
+            <param name="type">Тип фигуры для создания.</param>
+            <returns>Созданная <see cref="T:TetrisGame.TetrisFigure"/>.</returns>
+            <exception cref="T:System.ArgumentException">
+            Выбрасывается, если указанный тип фигуры не распознан.
+            </exception>
+        </member>
+        <member name="M:TetrisGame.TetrisFigureFactory.CreateRandomFigure(System.Random)">
+            <summary>
+            Создает случайную фигуру Тетриса.
+            </summary>
+            <param name="random">Генератор случайных чисел для использования.</param>
+            <returns>Случайно сгенерированная <see cref="T:TetrisGame.TetrisFigure"/>.</returns>
+        </member>
+        <member name="T:TetrisGame.GameField">
+            <summary>
+            Представляет игровое поле Тетриса, включая логику движения фигур,
+            обнаружения коллизий и подсчета очков.
+            </summary>
+        </member>
+        <member name="P:TetrisGame.GameField.Score">
+            <summary>
+            Получает текущее количество очков в игре.
+            </summary>
+        </member>
+        <member name="M:TetrisGame.GameField.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Инициализирует новый экземпляр класса <see cref="T:TetrisGame.GameField"/>.
+            </summary>
+            <param name="rows">Количество строк в игровом поле.</param>
+            <param name="columns">Количество столбцов в игровом поле.</param>
+        </member>
+        <member name="M:TetrisGame.GameField.HasSpaceForNewFigure">
+            <summary>
+            Определяет, есть ли место для появления новой фигуры Тетриса.
+            </summary>
+            <returns><see langword="true"/> если есть место; в противном случае <see langword="false"/>.</returns>
+        </member>
+        <member name="M:TetrisGame.GameField.SpawnFigure(TetrisGame.TetrisFigure)">
+            <summary>
+            Появляется новая фигура Тетриса в верхней части игрового поля.
+            </summary>
+            <param name="figure">Фигура Тетриса для появления.</param>
+            <exception cref="T:System.InvalidOperationException">Выбрасывается, если нет места для появления фигуры.</exception>
+        </member>
+        <member name="P:TetrisGame.GameField.CanMoveCurrentFigure">
+            <summary>
+            Получает значение, указывающее, может ли текущая фигура ещё двигаться.
+            </summary>
+        </member>
+        <member name="M:TetrisGame.GameField.HandleMove(TetrisGame.Movement)">
+            <summary>
+            Обрабатывает движение активной фигуры Тетриса.
+            </summary>
+            <param name="direction">Направление, в котором нужно двигать фигуру.</param>
+        </member>
+        <member name="M:TetrisGame.GameField.Render">
+            <summary>
+            Отрисовывает игровое поле и текущую фигуру Тетриса в консоли.
+            </summary>
+        </member>
+        <member name="T:TetrisGame.GameField.Position">
+            <summary>
+            Представляет позицию на игровом поле.
+            </summary>
+            <param name="Row">Индекс строки.</param>
+            <param name="Column">Индекс столбца.</param>
+        </member>
+        <member name="M:TetrisGame.GameField.Position.#ctor(System.Int32,System.Int32)">
+            <summary>
+            Представляет позицию на игровом поле.
+            </summary>
+            <param name="Row">Индекс строки.</param>
+            <param name="Column">Индекс столбца.</param>
+        </member>
+        <member name="P:TetrisGame.GameField.Position.Row">
+            <summary>Индекс строки.</summary>
+        </member>
+        <member name="P:TetrisGame.GameField.Position.Column">
+            <summary>Индекс столбца.</summary>
+        </member>
+        <member name="T:TetrisGame.GuessingGame">
+            <summary>
+            Представляет игру "Угадай результат".
+            </summary>
+        </member>
+        <member name="M:TetrisGame.GuessingGame.PlayGuessingGame">
+            <summary>
+            Запускает игру "Угадай результат".
+            </summary>
+        </member>
+        <member name="M:TetrisGame.GuessingGame.ReadDoubleInput(System.String)">
+            <summary>
+            Читает ввод пользователя и преобразует его в число с плавающей точкой.
+            </summary>
+            <param name="prompt">Сообщение, которое будет показано пользователю.</param>
+            <returns>Число с плавающей точкой, введенное пользователем.</returns>
+        </member>
+        <member name="M:TetrisGame.GuessingGame.ComputeAnswer(System.Double,System.Double)">
+            <summary>
+            Вычисляет правильный ответ на основе двух чисел.
+            </summary>
+            <param name="a">Первое число.</param>
+            <param name="b">Второе число.</param>
+            <returns>Вычисленный ответ.</returns>
+        </member>
+        <member name="M:TetrisGame.GuessingGame.TestUserGuess(System.Double)">
+            <summary>
+            Проверяет догадки пользователя относительно правильного ответа.
+            </summary>
+            <param name="correctAnswer">Правильный ответ, который нужно угадать.</param>
+        </member>
+        <member name="T:TetrisGame.InputValidator">
+            <summary>
+            Предоставляет методы для валидации и обработки ввода пользователя для управления игрой Тетрис.
+            </summary>
+        </member>
+        <member name="M:TetrisGame.InputValidator.ValidateControlInput(System.String)">
+            <summary>
+            Проверяет, соответствует ли ввод допустимым управляющим командам игры Тетрис.
+            Допустимые команды: A (Движение влево), D (Движение вправо), S (Движение вниз), W (Поворот) и Space (Быстрое падение).
+            </summary>
+            <param name="input">Строка ввода пользователя для проверки.</param>
+            <returns><see langword="true"/> если ввод является допустимой командой; в противном случае <see langword="false"/>.</returns>
+        </member>
+        <member name="M:TetrisGame.InputValidator.GetValidatedControlInput">
+            <summary>
+            Запрашивает пользователя до тех пор, пока не будет предоставлен допустимый ввод управления игрой Тетрис.
+            </summary>
+            <returns>Проверенная строка, представляющая допустимую команду.</returns>
+        </member>
+        <member name="T:TetrisGame.Movement">
+            <summary>
+            Представляет возможные направления движения фигур Тетриса.
+            </summary>
+        </member>
+        <member name="F:TetrisGame.Movement.Left">
+            <summary>
+            Двигать фигуру влево.
+            </summary>
+        </member>
+        <member name="F:TetrisGame.Movement.Right">
+            <summary>
+            Двигать фигуру вправо.
+            </summary>
+        </member>
+        <member name="F:TetrisGame.Movement.Down">
+            <summary>
+            Двигать фигуру вниз.
+            </summary>
+        </member>
+        <member name="F:TetrisGame.Movement.Rotate">
+            <summary>
+            Поворачивать фигуру по часовой стрелке.
+            </summary>
+        </member>
+        <member name="T:TetrisGame.Program">
+            <summary>
+            Точка входа в программу
+            </summary>
+        </member>
+        <member name="T:TetrisGame.ShapeType">
+            <summary>
+            Представляет различные формы фигур Тетриса.
+            </summary>
+        </member>
+        <member name="F:TetrisGame.ShapeType.Square">
+            <summary>
+            Фигура в форме квадрата.
+            </summary>
+        </member>
+        <member name="F:TetrisGame.ShapeType.Line">
+            <summary>
+            Фигура в форме прямой линии.
+            </summary>
+        </member>
+        <member name="F:TetrisGame.ShapeType.L">
+            <summary>
+            Фигура в форме L.
+            </summary>
+        </member>
+        <member name="F:TetrisGame.ShapeType.J">
+            <summary>
+            Фигура в форме обратной L.
+            </summary>
+        </member>
+        <member name="F:TetrisGame.ShapeType.Z">
+            <summary>
+            Фигура в форме Z.
+            </summary>
+        </member>
+        <member name="F:TetrisGame.ShapeType.S">
+            <summary>
+            Фигура в форме обратной Z.
+            </summary>
+        </member>
+        <member name="F:TetrisGame.ShapeType.T">
+            <summary>
+            Фигура в форме T.
+            </summary>
+        </member>
+        <member name="T:TetrisGame.TetrisFigure">
+            <summary>
+            Представляет фигуру Тетриса, включая её форму, тип и операции, такие как вращение.
+            </summary>
+            <param name="Shape">Двумерный массив, определяющий форму фигуры.</param>
+            <param name="Type">Тип фигуры, как <see cref="T:TetrisGame.ShapeType"/>.</param>
+        </member>
+        <member name="M:TetrisGame.TetrisFigure.#ctor(System.Int32[0:,0:],TetrisGame.ShapeType)">
+            <summary>
+            Представляет фигуру Тетриса, включая её форму, тип и операции, такие как вращение.
+            </summary>
+            <param name="Shape">Двумерный массив, определяющий форму фигуры.</param>
+            <param name="Type">Тип фигуры, как <see cref="T:TetrisGame.ShapeType"/>.</param>
+        </member>
+        <member name="P:TetrisGame.TetrisFigure.Shape">
+            <summary>Двумерный массив, определяющий форму фигуры.</summary>
+        </member>
+        <member name="P:TetrisGame.TetrisFigure.Type">
+            <summary>Тип фигуры, как <see cref="T:TetrisGame.ShapeType"/>.</summary>
+        </member>
+        <member name="P:TetrisGame.TetrisFigure.Width">
+            <summary>
+            Получает ширину фигуры.
+            </summary>
+        </member>
+        <member name="P:TetrisGame.TetrisFigure.Height">
+            <summary>
+            Получает высоту фигуры.
+            </summary>
+        </member>
+        <member name="M:TetrisGame.TetrisFigure.Rotate">
+            <summary>
+            Вращает фигуру по часовой стрелке.
+            </summary>
+            <returns>Новая <see cref="T:TetrisGame.TetrisFigure"/>, представляющая вращённую форму.</returns>
+        </member>
+        <member name="M:TetrisGame.TetrisFigure.ToString">
+            <summary>
+            Возвращает строковое представление формы фигуры.
+            </summary>
+            <returns>Строка, отображающая форму фигуры с использованием символов.</returns>
+        </member>
+    </members>
+</doc>

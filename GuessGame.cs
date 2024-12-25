@@ -65,34 +65,27 @@ namespace TetrisGame
         /// </summary>
         /// <param name="correctAnswer">Правильный ответ, который нужно угадать.</param>
         static void TestUserGuess(double correctAnswer)
+{
+    const int maxAttempts = 3;
+    Console.WriteLine($"Угадайте результат вычисления. У вас есть {maxAttempts} попытки.");
+
+    for (int attempt = 1; attempt <= maxAttempts; attempt++)
+    {
+        double userGuess = ReadDoubleInput("Введите ваш ответ:");
+
+        if (Math.Abs(userGuess - correctAnswer) < 0.0001)
         {
-            const int maxAttempts = 3;
-            Console.WriteLine($"Угадайте результат вычисления. У вас есть {maxAttempts} попытки.");
-
-            for (int attempt = 1; attempt <= maxAttempts; attempt++)
-            {
-                bool c = true;
-                while (c == true)
-                {
-                    double userGuess = ReadDoubleInput("Введите ваш ответ:");
-
-                    if (Math.Abs(userGuess - correctAnswer) < 0.0001)
-                    {
-                        Console.WriteLine($"Поздравляем! Вы угадали правильный ответ: {correctAnswer}");
-                        c = false;
-                    }
-                    else
-                    {
-                        Console.WriteLine($"Неверно. Осталось попыток: {maxAttempts - attempt}");
-                    }
-                }
-
-                // Если пользователь не угадал за все попытки, выводим правильный ответ
-                if (attempt == maxAttempts)
-                {
-                    Console.WriteLine($"Вы проиграли! Правильный ответ: {correctAnswer}");
-                }
-            }
+            Console.WriteLine($"Поздравляем! Вы угадали правильный ответ: {correctAnswer}");
+            return; // Завершаем метод, если пользователь угадал
         }
+        else
+        {
+            Console.WriteLine($"Неверно. Осталось попыток: {maxAttempts - attempt}");
+        }
+    }
+
+    // Если пользователь не угадал за все попытки, выводим правильный ответ
+    Console.WriteLine($"Вы проиграли! Правильный ответ: {correctAnswer}");
+}
     }
 }

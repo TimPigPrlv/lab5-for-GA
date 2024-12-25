@@ -1,26 +1,26 @@
 namespace TetrisGame
 {
     /// <summary>
-    /// Represents a Tetris figure, including its shape, type, and operations like rotation.
+    /// Представляет фигуру Тетриса, включая её форму, тип и операции, такие как вращение.
     /// </summary>
-    /// <param name="Shape">The 2D array defining the shape of the figure.</param>
-    /// <param name="Type">The type of the figure, as a <see cref="ShapeType"/>.</param>
+    /// <param name="Shape">Двумерный массив, определяющий форму фигуры.</param>
+    /// <param name="Type">Тип фигуры, как <see cref="ShapeType"/>.</param>
     public record TetrisFigure(int[,] Shape, ShapeType Type)
     {
         /// <summary>
-        /// Gets the width of the figure.
+        /// Получает ширину фигуры.
         /// </summary>
         public int Width => Shape.GetLength(1);
 
         /// <summary>
-        /// Gets the height of the figure.
+        /// Получает высоту фигуры.
         /// </summary>
         public int Height => Shape.GetLength(0);
 
         /// <summary>
-        /// Rotates the figure clockwise.
+        /// Вращает фигуру по часовой стрелке.
         /// </summary>
-        /// <returns>A new <see cref="TetrisFigure"/> representing the rotated shape.</returns>
+        /// <returns>Новая <see cref="TetrisFigure"/>, представляющая вращённую форму.</returns>
         public TetrisFigure Rotate()
         {
             int newHeight = Width;
@@ -39,9 +39,9 @@ namespace TetrisGame
         }
 
         /// <summary>
-        /// Returns a string representation of the figure's shape.
+        /// Возвращает строковое представление формы фигуры.
         /// </summary>
-        /// <returns>A string displaying the figure's shape using symbols.</returns>
+        /// <returns>Строка, отображающая форму фигуры с использованием символов.</returns>
         public override string ToString()
         {
             var sb = new System.Text.StringBuilder();

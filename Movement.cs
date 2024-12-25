@@ -1,27 +1,27 @@
 namespace TetrisGame
 {
     /// <summary>
-    /// Represents the possible movement directions for Tetris figures.
+    /// Представляет возможные направления движения фигур Тетриса.
     /// </summary>
     public enum Movement
     {
         /// <summary>
-        /// Move the figure to the left.
+        /// Двигать фигуру влево.
         /// </summary>
         Left,
 
         /// <summary>
-        /// Move the figure to the right.
+        /// Двигать фигуру вправо.
         /// </summary>
         Right,
 
         /// <summary>
-        /// Move the figure downward.
+        /// Двигать фигуру вниз.
         /// </summary>
         Down,
 
         /// <summary>
-        /// Rotate the figure clockwise.
+        /// Поворачивать фигуру по часовой стрелке.
         /// </summary>
         Rotate
     }

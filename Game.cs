@@ -1,9 +1,8 @@
 namespace TetrisGame
 {
-
     /// <summary>
-    /// Represents the Tetris game controller.
-    /// Manages the game flow, including spawning figures, rendering the field, and processing user inputs.
+    /// Представляет контроллер игры Тетрис.
+    /// Управляет игровым процессом, включая создание фигур, отображение поля и обработку пользовательского ввода.
     /// </summary>
     public class Game
     {
@@ -11,7 +10,7 @@ namespace TetrisGame
         private readonly Random _random;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="Game"/> class.
+        /// Инициализирует новый экземпляр класса <see cref="Game"/>.
         /// </summary>
         public Game()
         {
@@ -20,12 +19,12 @@ namespace TetrisGame
         }
 
         /// <summary>
-        /// Starts the Tetris game.
-        /// Displays game instructions, handles figure spawning, user input, and game termination.
+        /// Запускает игру Тетрис.
+        /// Отображает инструкции по игре, обрабатывает создание фигур, ввод от пользователя и завершение игры.
         /// </summary>
         public void Start()
         {
-            Console.WriteLine("Welcome to Tetris!");
+            Console.WriteLine("Добро пожаловать в Тетрис!");
 
             try
             {
@@ -47,17 +46,17 @@ namespace TetrisGame
                         }
                         else
                         {
-                            Console.WriteLine("Invalid input!");
+                            Console.WriteLine("Неверный ввод!");
                         }
                     }
                 }
-                Console.WriteLine("Game Over");
-                Console.WriteLine($"Final Score: {_gameField.Score}");
+                Console.WriteLine("Игра окончена");
+                Console.WriteLine($"Итоговый счет: {_gameField.Score}");
             }
             catch (Exception ex)
             {
-                Console.WriteLine("Game Over");
-                Console.WriteLine($"Final Score: {_gameField.Score}");
+                Console.WriteLine("Игра окончена");
+                Console.WriteLine($"Итоговый счет: {_gameField.Score}");
                 Console.WriteLine(ex.Message);
             }
         }
@@ -77,8 +76,8 @@ namespace TetrisGame
     }
 
     /// <summary>
-    /// A factory class for creating Tetris figures.
-    /// Provides methods to create predefined or random figures.
+    /// Фабрика для создания фигур Тетриса.
+    /// Предоставляет методы для создания предопределенных или случайных фигур.
     /// </summary>
     public static class TetrisFigureFactory
     {
@@ -94,30 +93,29 @@ namespace TetrisGame
         };
 
         /// <summary>
-        /// Creates a Tetris figure of the specified type.
+        /// Создает фигуру Тетриса указанного типа.
         /// </summary>
-        /// <param name="type">The type of figure to create.</param>
-        /// <returns>The created <see cref="TetrisFigure"/>.</returns>
+        /// <param name="type">Тип фигуры для создания.</param>
+        /// <returns>Созданная <see cref="TetrisFigure"/>.</returns>
         /// <exception cref="ArgumentException">
-        /// Thrown if the specified figure type is not recognized.
+        /// Выбрасывается, если указанный тип фигуры не распознан.
         /// </exception>
         public static TetrisFigure CreateFigure(ShapeType type)
         {
-            Console.WriteLine($"Creating figure '{type}'");
+            Console.WriteLine($"Создание фигуры '{type}'");
             if (CanonicalFigures.TryGetValue(type, out var shape))
             {
                 return new TetrisFigure(shape, type);
             }
 
-            throw new ArgumentException($"Figure '{type}' is not recognized.", nameof(type));
+            throw new ArgumentException($"Фигура '{type}' не распознана.", nameof(type));
         }
 
-
         /// <summary>
-        /// Creates a random Tetris figure.
+        /// Создает случайную фигуру Тетриса.
         /// </summary>
-        /// <param name="random">The random number generator to use.</param>
-        /// <returns>A randomly generated <see cref="TetrisFigure"/>.</returns>
+        /// <param name="random">Генератор случайных чисел для использования.</param>
+        /// <returns>Случайно сгенерированная <see cref="TetrisFigure"/>.</returns>
         public static TetrisFigure CreateRandomFigure(Random random)
         {
             var figureTypes = Enum.GetValues<ShapeType>();
