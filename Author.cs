@@ -14,7 +14,7 @@ namespace TetrisGame
        public static void ShowAuthorInfo()
     {
         Console.WriteLine("--- Информация об авторе ---");
-        Console.WriteLine("Автор: Райан Гослинг из фильма Драйв(я не умер)");
+        Console.WriteLine("Автор: Привалов Тимофей Сергеевич");
         Console.WriteLine("Студент группы 6101-090301D");
     }
     }

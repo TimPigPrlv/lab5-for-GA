@@ -1,8 +1,6 @@
 using System.Diagnostics.Contracts;
 using System.Diagnostics;
 
-
-
 namespace TetrisGame 
 {
     /// <summary>
@@ -82,6 +80,7 @@ namespace TetrisGame
         /// </summary>
         private void CompareSortingAlgorithms()
         {
+            // Используем поля класса для создания копий массива
             int[] bubbleSortArray = CopyArray(randomArray);
             int[] insertionSortArray = CopyArray(randomArray);
 

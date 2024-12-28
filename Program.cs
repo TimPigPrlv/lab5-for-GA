@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace TetrisGame
+namespace TetrisGame 
 {
     /// <summary>
     /// Точка входа в программу
@@ -37,8 +37,12 @@ namespace TetrisGame
                         int userInputLength;
                         if (int.TryParse(Console.ReadLine(), out userInputLength) && userInputLength > 0)
                         {
-                            ArraySorting customArraySort = new ArraySorting(userInputLength);
+                            // Создаем экземпляр класса с параметрами
+                            ArraySorting customArraySort = new ArraySorting(userInputLength); // конструктор с параметрами
                             customArraySort.PerformArraySorting();
+                            // Создаем экземпляр класса без параметров и выполняем сортировку
+                            ArraySorting defaultArraySort = new ArraySorting();
+                            defaultArraySort.PerformArraySorting();
                         }
                         else
                         {
@@ -50,7 +54,7 @@ namespace TetrisGame
                         isExiting = true; // Устанавливаем флаг выхода
                         break;
                     case "5":
-                         Game game = new Game();
+                        Game game = new Game();
                         game.Start();
                         break;
                     default:
@@ -58,10 +62,6 @@ namespace TetrisGame
                         break;
                 }
             }
-
-            // Создаем экземпляр класса без параметров
-            ArraySorting defaultArraySort = new ArraySorting();
-            defaultArraySort.PerformArraySorting();
 
             
         }

@@ -317,6 +317,6 @@ private bool IsPartOfActiveFigure(int row, int col, Position position, TetrisFig
 /// </summary>
 /// <param name="Row">Индекс строки.</param>
 /// <param name="Column">Индекс столбца.</param>
-public record Position(int Row, int Column);
+public record Position(int Row, int Column); //предназначена для упрощения создания неизменяемых объектов с семантикой значений
 }
 }
